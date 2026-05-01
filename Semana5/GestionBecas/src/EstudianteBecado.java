@@ -4,4 +4,8 @@ public class EstudianteBecado extends Estudiante {
         super(codigo,nombre,promedio,valorMatricula);
         this.porcentajeBeca=procentajeBeca;
     }
+
+    public void setPorcentajeBeca(double porcentajeBeca) {
+        this.porcentajeBeca = porcentajeBeca;
+    }
 }
