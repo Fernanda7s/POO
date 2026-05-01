@@ -41,9 +41,7 @@ public abstract class Estudiante {
         System.out.println("Promedio: "+promedio);
         System.out.println("Matricula: "+valorMatricular);
     }
-    public boolean validarPromedio(){
 
-    }
     public abstract double calcularPagoFinal();
 
 }

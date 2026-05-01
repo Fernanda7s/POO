@@ -11,7 +11,7 @@ public abstract class EstudianteBecado extends Estudiante {
 
     @Override
     public double calcularPagoFinal() {
-        return getValorMatricular() -(getValorMatricular()*porcentajeBeca);
+        return getValorMatricular() -((getValorMatricular()*porcentajeBeca)/100);
     }
 
     public abstract double calculaPagoFinal();
