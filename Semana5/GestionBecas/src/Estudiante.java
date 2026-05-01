@@ -26,4 +26,24 @@ public abstract class Estudiante {
     public void setValorMatricular(double valorMatricular) {
         this.valorMatricular = valorMatricular;
     }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public double getValorMatricular() {
+        return valorMatricular;
+    }
+
+    public  void mostrarDatos (){
+        System.out.println("Codigo: "+codigo);
+        System.out.println("Nombre: "+ nombre);
+        System.out.println("Promedio: "+promedio);
+        System.out.println("Matricula: "+valorMatricular);
+    }
+    public boolean validarPromedio(){
+
+    }
+    public abstract double calcularPagoFinal();
+
 }
