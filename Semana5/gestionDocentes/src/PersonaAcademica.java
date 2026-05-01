@@ -80,6 +80,20 @@ public abstract class PersonaAcademica {
             System.out.println("Error: mayor a 0");
 
         }
+    }
+    abstract double calcularPago();
+
+
+    void mostrarDatos(){
+        System.out.println("Codigo: "+codigo);
+        System.out.println("Nombre: "+ nommbre);
+        System.out.println("Edad: "+edad);
+        System.out.println("HoraClase: "+ horasClase);
+        System.out.println("Vaolor HOras: "+ valorHora);
+        System.out.println("publicaciones : "+ publicaciones);
+    }
+    void describirRoll (){
 
     }
+
 }
