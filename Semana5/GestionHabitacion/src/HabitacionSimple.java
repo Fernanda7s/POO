@@ -5,6 +5,11 @@ public class HabitacionSimple extends Habitacion {
     public HabitacionSimple(String codigo, String tipoHabitacion, double tarifaBase, int numeroNoches, boolean disponible, boolean desayunoIncluido, double costoServicioBasico) {
         super(codigo, tipoHabitacion, tarifaBase, numeroNoches, disponible);
     }
+    @Override
+    public double disponibilidad() {
+        return 0;
+    }
+
 
     @Override
     public double calcularHOspedaje() {
@@ -16,9 +21,6 @@ public class HabitacionSimple extends Habitacion {
 
     }
 
-    @Override
-    public double disponibilidad() {
-        return 0;
-    }
+
 
 }
