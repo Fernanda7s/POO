@@ -14,6 +14,8 @@ public abstract class Habitacion {
         this.disponible=disponible;
     }
 
+
+
     public double getTarifaBase() {
         return tarifaBase;
     }
@@ -46,7 +48,7 @@ public abstract class Habitacion {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
-    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
     double hospedajeBase (){
         return tarifaBase*numeroNoches;
     }
@@ -67,6 +69,10 @@ public abstract class Habitacion {
     double iva(boolean frecuente){
         double sutotal= (hospedajeBase()-descuentoNches()-descuentoCliente(frecuente))*0.15;
         return sutotal;
+    }
+
+    double formulaGeneral(boolean frecuent, double recargo){
+        return hospedajeBase()-descuentoCliente(frecuent)-descuentoNches()+iva(frecuent)+recargo;
     }
     public abstract double calcularHOspedaje();
 

@@ -2,19 +2,23 @@ public  class Suite extends Habitacion {
     private boolean jacuzzi;
     private double sericoPremiun;
 
-    public Suite(String codigo, String tipoHabitacion, double tarifaBase, int numeroNoches, boolean disponible, boolean jacuzzi, double sericoPremiun) {
-        super(codigo, tipoHabitacion, tarifaBase, numeroNoches, disponible);
+    public Suite(String codigo, String tipoHabitacion, double tarifaBase, int numeroNoches,boolean disponible) {
+        super(codigo, tipoHabitacion, tarifaBase, numeroNoches,  disponible);
         this.jacuzzi=jacuzzi;
         this.sericoPremiun=sericoPremiun;
     }
 
+
+
     @Override
     public double calcularHOspedaje() {
-        return 0;
+
+        return (getTarifaBase()+getNumeroNoches())+sericoPremiun;
     }
 
     @Override
     public void mostrarDetalles() {
+        System.out.println("Tipo Habitacion: Suite");
 
     }
 

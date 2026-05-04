@@ -1,7 +1,7 @@
 public class HabitacionFamiliar extends Habitacion{
     private int capacidadPersonas;
     private double descuento;
-    public HabitacionFamiliar(String codigo, String tipoHabitacion, double tarifaBase, int numeroNoches, boolean disponible, int capacidadPersonas,double descuento) {
+    public HabitacionFamiliar(String codigo, String tipoHabitacion, double tarifaBase, int numeroNoches,boolean disponible) {
         super(codigo, tipoHabitacion, tarifaBase, numeroNoches, disponible);
         this.capacidadPersonas=capacidadPersonas;
         this.descuento=descuento;
@@ -9,11 +9,12 @@ public class HabitacionFamiliar extends Habitacion{
 
     @Override
     public double calcularHOspedaje() {
-        return 0;
+        return (getTarifaBase()*getNumeroNoches())-descuento;
     }
 
     @Override
     public void mostrarDetalles() {
+        System.out.println("Tipo Habitacion: Habitacion Familiar");
 
     }
 
