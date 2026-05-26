@@ -1,3 +1,5 @@
+package modelo;
+
 public class Empleado {
     private String cedula;
     private String nombre;
@@ -13,7 +15,17 @@ public class Empleado {
         this.correo = correo;
     }
 
-    void mostrarInformacion(){
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void mostrarInformacion(){
+        System.out.println("Cedula: "+cedula);
+        System.out.println("Nombre: "+nombre);
+        System.out.println("Edad: "+edad);
+        System.out.println("Telefono: "+telefono);
+        System.out.println("Correo: "+correo);
+
 
     }
     double calcularPago(){
