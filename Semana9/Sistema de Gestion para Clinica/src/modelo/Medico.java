@@ -25,7 +25,7 @@ public class Medico extends Empleado {
     }
 
     @Override
-    double calcularPago() {
+    public static double calcularPago() {
         double pago = numeroPacientesAtendidos*valorConsulta;
         return pago;
     }

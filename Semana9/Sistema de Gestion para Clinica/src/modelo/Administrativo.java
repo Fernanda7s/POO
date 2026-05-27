@@ -25,7 +25,7 @@ public class Administrativo extends Empleado {
     }
 
     @Override
-    double calcularPago(){
+    public double calcularPago(){
         double pago = horasTrabjadas*valorHora;
         return pago;
     }

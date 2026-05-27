@@ -1,6 +1,6 @@
 package modelo;
 
-public class Empleado {
+public abstract class Empleado {
     private String cedula;
     private String nombre;
     private int edad;
@@ -19,6 +19,10 @@ public class Empleado {
         return cedula;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public void mostrarInformacion(){
         System.out.println("Cedula: "+cedula);
         System.out.println("Nombre: "+nombre);
@@ -28,7 +32,5 @@ public class Empleado {
 
 
     }
-    double calcularPago(){
-    return 0;
-    }
+    public abstract double calcularPago();
 }

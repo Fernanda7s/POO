@@ -7,14 +7,14 @@ import modelo.Medico;
 import  java.util.ArrayList;
 import java.util.Scanner;
 
-public class Validador {
+public class EmpleadoServicio {
     private ArrayList<Medico> medicos;
     private ArrayList<Administrativo> administrativos;
     private ArrayList<Empleado>empleados;
     private Scanner sc;
 
     // constructor de la clase gestor
-    public Validador(){
+    public EmpleadoServicio(){
         medicos = new ArrayList<>();
         administrativos= new ArrayList<>();
         empleados= new ArrayList<>();
@@ -155,13 +155,67 @@ public class Validador {
             System.out.print("Ingrese cedula: ");
             String cedula = sc.next();
             Empleado e = buscarCedula();
-
+            empleados.remove(e);
+            System.out.println("✅ Jugador '" + e.getNombre() + "' eliminado.");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
-    public void calcularPagos(){
+    public void calcularPagos() {
+        System.out.println("__________CALCULAR PAGOS ____________________");
+        try {
+            System.out.print("Ingrese cedula: ");
+            String cedula = sc.next();
+            Empleado e = buscarCedula();
+            if (e instanceof Medico) {
+                Medico m = (Medico) e;
+                calcularPagos();
+            } else if (e instanceof Administrativo) {
+                Administrativo a = (Administrativo) e;
+                calcularPagos();
+            }
+
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
     }
-    public void mostrarEstadisticas(){
+
+        public void mostrarEstadisticas(){
+        System.out.println("__________CALCULAR PAGOS ____________________");
+        int contarMedicos=0;
+        int contarEmpleados=empleados.size();
+        int contarAdministrativo=0;
+        double pagoMedico=0;
+        double pagoAdministracion=0;
+        Empleado mayor = empleados.get(0);
+
+
+        for (Empleado e :empleados){
+            if (e instanceof Medico){
+                contarMedicos ++;
+                pagoMedico+=e.calcularPago();
+            } else if (e instanceof Administrativo) {
+                contarAdministrativo++;
+                pagoAdministracion=e.calcularPago();
+
+            }
+            if(e.calcularPago() > mayor.calcularPago()){
+                mayor = e;
+            }
+        }
+
+            System.out.println("Total empleados: "+ contarEmpleados);
+
+            System.out.println("Total medicos: " + contarMedicos);
+
+            System.out.println("Total administrativos: " + contarAdministrativo);
+            System.out.println("Total pago Medicos $: " + pagoMedico);
+            System.out.println("Total administrativos: " + pagoAdministracion);
+            System.out.println("Empleado con mayor ingreso:");
+            mayor.mostrarInformacion();
+
 
     }
 }
