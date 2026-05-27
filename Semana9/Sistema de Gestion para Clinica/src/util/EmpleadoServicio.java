@@ -3,6 +3,7 @@ package util;
 import modelo.Administrativo;
 import modelo.Empleado;
 import modelo.Medico;
+import servicio.Validador;
 
 import  java.util.ArrayList;
 import java.util.Scanner;
@@ -53,9 +54,9 @@ public class EmpleadoServicio {
         System.out.println("__________REGISTRAR ADMINISTRATIVO____________________");
         try {
             System.out.print("Cedula:");
-            String cedula=sc.next();
+            String cedula=Validador.leerCedula();
             System.out.print("Nombre:");
-            String nombre = sc.nextLine();
+            String nombre = Validador.leerTexto();
             System.out.print("Edad:");
             int edad = sc.nextInt();
             System.out.print("Telefono:");
@@ -95,7 +96,7 @@ public class EmpleadoServicio {
         System.out.println("__________BUSCAR POR CEDULA ____________________");
         try {
             System.out.print("Cedula:");
-            String cedula=sc.next();
+            String cedula=Validador.leerCedula();
             boolean encontrado = false;
             for (Empleado e: empleados){
                 if (e.getCedula().equals(cedula)){
