@@ -20,6 +20,7 @@ public class Validador {
                 }
 
                 // LONGITUD
+
                 if(cedula.length() != 10){
                     throw new Exception("Debe tener 10 digitos");
                 }
@@ -62,21 +63,14 @@ public class Validador {
 
     // LEER ENTERO
 
-    public static int leerEntero(
-            String mensaje,
-            int min,
-            int max){
-
+    public static int leerEntero(String mensaje){
         while(true){
 
             try{
-
                 System.out.print(mensaje);
-
                 int numero = sc.nextInt();
-
                 sc.nextLine();
-                if(numero < min || numero > max){
+                if(numero < 0 || numero > 120){
                     throw new Exception("Fuera de rango");
                 }
 

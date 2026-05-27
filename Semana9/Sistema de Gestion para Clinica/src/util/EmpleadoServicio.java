@@ -25,21 +25,18 @@ public class EmpleadoServicio {
         System.out.println("__________REGISTRAR MEDICO____________________");
        try {
            System.out.print("Cedula:");
-           String cedula=sc.next();
-           System.out.print("Nombre:");
-           String nombre = sc.nextLine();
-           System.out.print("Edad:");
-           int edad = sc.nextInt();
+           String cedula=Validador.leerCedula();
+           String nombre = Validador.leerTexto("Nombre: ");
+           int edad = Validador.leerEntero("Edad");
+
            System.out.print("Telefono:");
            String telefono =sc.next();
            System.out.print("Correo:");
            String correo = sc.next();
-           System.out.print("Especialidad:");
-           String especialidad = sc.nextLine();
-           System.out.print("Numeros pacientes antendidos:");
-           int numeroPaciente=sc.nextInt();
-           System.out.print("Valor de consulta $:");
-           double consulta=sc.nextDouble();
+           String especialidad = Validador.leerTexto("Especialidad: ");
+           int numeroPaciente=Validador.leerEntero("Numeros pacientes antendidos:");
+
+           double consulta=Validador.leerDouble("Valor de consulta $:");
            //agregar a un objeto
            Medico m = new Medico(cedula,nombre,edad,telefono,correo,especialidad,numeroPaciente,consulta);
            //guardar en un arreglo
@@ -55,20 +52,16 @@ public class EmpleadoServicio {
         try {
             System.out.print("Cedula:");
             String cedula=Validador.leerCedula();
-            System.out.print("Nombre:");
-            String nombre = Validador.leerTexto();
-            System.out.print("Edad:");
-            int edad = sc.nextInt();
+            String nombre = Validador.leerTexto("Nombre: ");
+            int edad = Validador.leerEntero("Edad");
+
             System.out.print("Telefono:");
             String telefono =sc.next();
             System.out.print("Correo:");
             String correo = sc.next();
-            System.out.print("Departamento:");
-            String departamento = sc.nextLine();
-            System.out.print("Horas Trabajadas:");
-            int horasTrabjadas=sc.nextInt();
-            System.out.print("Valor por hora $:");
-            double valorHora=sc.nextDouble();
+            String departamento = Validador.leerTexto("Departamento: ");
+            int horasTrabjadas=Validador.leerEntero("Horas trabjadas:");
+            double valorHora=Validador.leerDouble("Valor por horaa $:");
             //agregar a un objeto
             Administrativo a = new Administrativo(cedula,nombre,edad,telefono,correo,departamento,horasTrabjadas,valorHora);
             //guardar en un arreglo
@@ -121,29 +114,30 @@ public class EmpleadoServicio {
         try {
            ;
             System.out.print("Ingrese cedula: ");
-            String cedula = sc.next();
+            String cedula = Validador.leerCedula();
            Empleado e = buscarCedula();
            if (e instanceof Medico){
                Medico m = (Medico) e;
-               System.out.print("Nueva Especialidad: ");
-               String newEspecialidad = sc.nextLine();
+               String newEspecialidad = Validador.leerTexto("nueva Especialidad: ");
+              ;
                m.setEspecialidad(newEspecialidad);
-               System.out.println("# nuevo Pacientes atendidos: ");
-               int pacientes=sc.nextInt();
+
+               int pacientes=Validador.leerEntero("# nuevo Pacientes atendidos:");
                m.setNumeroPacientesAtendidos(pacientes);
-               System.out.println("nuevo Valor de cosulta: ");
-               double newValor= sc.nextDouble();
+
+               double newValor= Validador.leerDouble("nuevo Valor de consulta $:");
                m.setValorConsulta(newValor);
            } else if (e instanceof  Administrativo) {
                Administrativo a = (Administrativo) e;
-               System.out.print("nuevo Departamento: ");
-               String newDepartamento = sc.nextLine();
+               String newDepartamento = Validador.leerTexto("nuevo departamento: ");
+
                a.setDepartamento(newDepartamento);
-               System.out.print("nuevo horas Trabjadas: ");
-               int newHoras = sc.nextInt();
+
+               int newHoras = Validador.leerEntero("# nuevo horas trabajadass:");
+
                a.setHorasTrabjadas(newHoras);
-               System.out.print("nuevo Valor por Hora: ");
-                double newValor= sc.nextDouble();
+
+                double newValor= Validador.leerDouble("nuevo Valor por hora $:");
                 a.setValorHora(newValor);
            }
         }catch (Exception e){
@@ -154,7 +148,7 @@ public class EmpleadoServicio {
         System.out.println("__________ELIMINAR INFORMACION ____________________");
         try{
             System.out.print("Ingrese cedula: ");
-            String cedula = sc.next();
+            String cedula = Validador.leerCedula();;
             Empleado e = buscarCedula();
             empleados.remove(e);
             System.out.println("✅ Jugador '" + e.getNombre() + "' eliminado.");
@@ -166,7 +160,7 @@ public class EmpleadoServicio {
         System.out.println("__________CALCULAR PAGOS ____________________");
         try {
             System.out.print("Ingrese cedula: ");
-            String cedula = sc.next();
+            String cedula = Validador.leerCedula();
             Empleado e = buscarCedula();
             if (e instanceof Medico) {
                 Medico m = (Medico) e;

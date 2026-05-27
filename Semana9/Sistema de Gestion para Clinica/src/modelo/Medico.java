@@ -23,9 +23,8 @@ public class Medico extends Empleado {
     public void setValorConsulta(double valorConsulta) {
         this.valorConsulta = valorConsulta;
     }
-
     @Override
-    public static double calcularPago() {
+    public double calcularPago() {
         double pago = numeroPacientesAtendidos*valorConsulta;
         return pago;
     }
