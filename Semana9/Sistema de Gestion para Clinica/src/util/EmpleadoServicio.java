@@ -31,8 +31,8 @@ public class EmpleadoServicio {
 
            System.out.print("Telefono:");
            String telefono =sc.next();
-           System.out.print("Correo:");
-           String correo = sc.next();
+
+           String correo = Validador.leerCorreo("correo");
            String especialidad = Validador.leerTexto("Especialidad: ");
            int numeroPaciente=Validador.leerEntero("Numeros pacientes antendidos:");
 

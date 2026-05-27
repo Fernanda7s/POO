@@ -40,6 +40,42 @@ public class Validador {
         }
     }
 
+    public static String leerCorreo(
+            String mensaje){
+
+        while(true){
+
+            try{
+
+                System.out.print(mensaje);
+
+                String correo = sc.nextLine();
+
+                if(correo.trim()
+                        .isEmpty()){throw new Exception("Campo vacio");
+                }
+
+                // VALIDAR @
+
+                if(!correo.contains("@")){
+                    throw new Exception("Debe contener @");
+                }
+
+                // VALIDAR .
+
+                if(!correo.contains(".")){
+
+                    throw new Exception("Debe contener .");
+                }
+                return correo;
+
+            }catch(Exception e){
+
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
     public static String leerTexto(String mensaje){
         while(true){
             try{
