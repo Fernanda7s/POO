@@ -30,8 +30,8 @@
             <Spinner fx:id="spnCantidad" prefHeight="26.0" prefWidth="115.0" />
          </children>
       </VBox>
-      <Button fx:id="btnIngresar" layoutX="68.0" layoutY="305.0" mnemonicParsing="false" text="Ingresar" />
-      <Button fx:id="btnBorrarr" layoutX="208.0" layoutY="305.0" mnemonicParsing="false" text="Borrar " />
+      <Button fx:id="btnIngresar" layoutX="68.0" layoutY="305.0" mnemonicParsing="false" onAction="#oningresarclick" text="Ingresar" />
+      <Button fx:id="btnBorrarr" layoutX="208.0" layoutY="305.0" mnemonicParsing="false" onAction="#onborrarclick" text="Borrar " />
       <Label fx:id="lblMensaje" layoutX="170.0" layoutY="356.0" text="Label" />
    </children>
 </AnchorPane>
