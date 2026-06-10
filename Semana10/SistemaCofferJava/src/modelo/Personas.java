@@ -1,3 +1,5 @@
+package modelo;
+
 public class Personas {
     private String nombre;
     private  String correo;
@@ -32,6 +34,7 @@ public class Personas {
     }
 
     public String totring(){
-        return "Nombre: "+nombre+"\nCorreo: "+correo+"\nEdad: "+edad;
+        return "Nombre: "+nombre+"\nCorreo: "
+                +correo+"\nEdad: "+edad;
     }
 }

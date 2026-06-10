@@ -1,4 +1,6 @@
-public class Cliente extends Personas  {
+package modelo;
+
+public class Cliente extends Personas {
     private String codigoCliente;
     private String tipoMembresia;
 
@@ -7,7 +9,6 @@ public class Cliente extends Personas  {
         this.codigoCliente = codigoCliente;
         this.tipoMembresia = tipoMembresia;
     }
-
     public String getCodigoCliente() {
         return codigoCliente;
     }
@@ -32,14 +33,20 @@ public class Cliente extends Personas  {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-
         Cliente c = (Cliente) obj;// esta parte se llama casting
-
         return codigoCliente.equals(c.codigoCliente);
     }
     @Override
     public int hashCode(){
 
         return codigoCliente.hashCode();
+    }
+    @Override
+    public String toString() {
+        return "Codigo: " + codigoCliente +
+                "\nMembresia: " + tipoMembresia +
+                "\nNombre: " + getNombre() +
+                "\nCorreo: " + getCorreo() +
+                "\nEdad: " + getEdad() +"\n____________________\n";
     }
 }

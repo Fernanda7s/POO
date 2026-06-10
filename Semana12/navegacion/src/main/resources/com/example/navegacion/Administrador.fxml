@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="411.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <TextArea layoutX="115.0" layoutY="38.0" prefHeight="38.0" prefWidth="147.0" scrollLeft="50.0" style="-fx-background-color: B7E7ED; -fx-font: B7E7ED;" text="    ADMINISTRADOR" wrapText="true" />
+      <Label layoutX="55.0" layoutY="92.0" text="Categoria " />
+      <TextField fx:id="txtCategoria" layoutX="55.0" layoutY="110.0" prefHeight="26.0" prefWidth="258.0" />
+      <Label layoutX="55.0" layoutY="150.0" text="Producto" />
+      <TextField fx:id="txtProducto" layoutX="56.0" layoutY="168.0" prefHeight="26.0" prefWidth="257.0" />
+      <HBox layoutX="55.0" layoutY="217.0" prefHeight="26.0" prefWidth="130.0">
+         <children>
+            <Label text="Precio" />
+         </children>
+      </HBox>
+      <HBox layoutX="185.0" layoutY="217.0" prefHeight="26.0" prefWidth="130.0">
+         <children>
+            <Label text="Cantidad " />
+         </children>
+      </HBox>
+      <VBox layoutX="54.0" layoutY="243.0" prefHeight="38.0" prefWidth="100.0">
+         <children>
+            <TextField fx:id="txtPrecio" />
+         </children>
+      </VBox>
+      <VBox layoutX="184.0" layoutY="243.0" prefHeight="38.0" prefWidth="100.0">
+         <children>
+            <Spinner fx:id="spnCantidad" prefHeight="26.0" prefWidth="115.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btnIngresar" layoutX="68.0" layoutY="305.0" mnemonicParsing="false" text="Ingresar" />
+      <Button fx:id="btnBorrarr" layoutX="208.0" layoutY="305.0" mnemonicParsing="false" text="Borrar " />
+      <Label fx:id="lblMensaje" layoutX="170.0" layoutY="356.0" text="Label" />
+   </children>
+</AnchorPane>

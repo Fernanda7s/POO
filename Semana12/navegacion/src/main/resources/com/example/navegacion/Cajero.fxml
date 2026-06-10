@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.navegacion.LoginController">
+   <children>
+      <TextArea layoutX="103.0" layoutY="46.0" prefHeight="17.0" prefWidth="232.0" style="-fx-background-color: B7EDB8;" text="                        CAJERO" />
+      <VBox layoutX="40.0" layoutY="100.0" prefHeight="50.0" prefWidth="330.0">
+         <children>
+            <Label text="Cedula" />
+            <TextField fx:id="btnCedula" prefHeight="26.0" prefWidth="134.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="40.0" layoutY="218.0" prefHeight="50.0" prefWidth="160.0">
+         <children>
+            <Label text="Cantidad" />
+         </children></HBox>
+      <HBox layoutX="219.0" layoutY="163.0" prefHeight="50.0" prefWidth="160.0" />
+      <VBox layoutX="34.0" layoutY="243.0" prefHeight="39.0" prefWidth="160.0">
+         <children>
+            <Spinner fx:id="spnCantidad" />
+         </children>
+      </VBox>
+      <VBox layoutX="233.0" layoutY="236.0" prefHeight="39.0" prefWidth="160.0" />
+      <TextField fx:id="txtPrecio" layoutX="238.0" layoutY="243.0" />
+      <Label layoutX="243.0" layoutY="222.0" text="Precio" />
+      <Label layoutX="40.0" layoutY="155.0" text="Producto" />
+      <SplitMenuButton fx:id="splProducto" layoutX="38.0" layoutY="188.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="339.0" text="SplitMenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+      <Button fx:id="btnPagar" layoutX="193.0" layoutY="315.0" mnemonicParsing="false" text="Pagar" />
+   </children>
+</AnchorPane>
