@@ -46,4 +46,6 @@ public class AdminController {
         spnCantidad.getValueFactory().setValue(1); // Resetea el spinner
         lblMensaje.setText("Campos limpios.");
     }
+
+
 }
